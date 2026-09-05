@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Application Register</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Application Register</h1>
+  <input type="text" id="filterInput" placeholder="Filter by Applicant Name..." onkeyup="filterTable()">
+  <button onclick="downloadData()">Download .txt</button>
+  <table id="registerTable" border="1">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem("applications") || "[]");
+    const table = document.getElementById("registerTable");
+    const thead = table.querySelector("thead");
+    const tbody = table.querySelector("tbody");
+
+    if (data.length > 0) {
+      const keys = Object.keys(data[0]);
+      thead.innerHTML = "<tr>" + keys.map(k => `<th>${k}</th>`).join('') + "</tr>";
+
+      data.forEach(entry => {
+        const row = document.createElement("tr");
+        keys.forEach(k => {
+          const cell = document.createElement("td");
+          cell.textContent = entry[k] || '';
+          row.appendChild(cell);
+        });
+        tbody.appendChild(row);
+      });
+    }
+
+    function filterTable() {
+      const input = document.getElementById("filterInput").value.toLowerCase();
+      const rows = tbody.querySelectorAll("tr");
+      rows.forEach(row => {
+        const nameCell = row.cells[2].textContent.toLowerCase();
+        row.style.display = nameCell.includes(input) ? "" : "none";
+      });
+    }
+
+    function downloadData() {
+      const content = data.map(row => JSON.stringify(row)).join("\n");
+      const blob = new Blob([content], { type: "text/plain" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "applicationregister.txt";
+      a.click();
+    }
+  </script>
+</body>
+</html>

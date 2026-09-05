@@ -1,0 +1,439 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+    transform: translateY(-2px);
+}
+
+select {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Button Styles */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+#generateTable {
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+    color: white;
+}
+
+#generateTable:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+#generateMerge {
+    background: linear-gradient(45deg, #FF9800, #F57C00);
+    color: white;
+}
+
+#generateMerge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+}
+
+#clearAll {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+    color: white;
+}
+
+#clearAll:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(244, 67, 54, 0.4);
+}
+
+/* Entries Display */
+#entriesCount {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#entriesList {
+    margin-top: 30px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #667eea;
+}
+
+#entriesList h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#currentEntries {
+    list-style: none;
+}
+
+#currentEntries li {
+    background: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border-left: 3px solid #667eea;
+    font-size: 0.9rem;
+}
+
+/* Table Page Styles */
+.table-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+}
+
+.table-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.table-header h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.generation-date {
+    color: #666;
+    font-style: italic;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f0f8ff;
+}
+
+.print-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.print-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* Print Styles */
+@media print {
+    @page {
+        size: A4;
+        margin: 1cm;
+    }
+    
+    body {
+        background: white;
+        font-size: 10px;
+    }
+    
+    .print-button {
+        display: none;
+    }
+    
+    .table-container {
+        padding: 0;
+    }
+    
+    table {
+        font-size: 9px;
+        page-break-inside: avoid;
+    }
+    
+    th, td {
+        padding: 4px;
+    }
+    
+    .table-header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Template Section Styles */
+.template-section {
+    margin-top: 30px;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #FF9800;
+}
+
+.template-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.template-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.template-tab {
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.template-tab:hover {
+    border-color: #FF9800;
+    transform: translateY(-2px);
+}
+
+.template-tab.active {
+    background: linear-gradient(45deg, #FF9800, #F57C00);
+    color: white;
+    border-color: #FF9800;
+}
+
+.template-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.template-info {
+    margin-bottom: 20px;
+}
+
+.template-info h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.field-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.field-tag {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-family: monospace;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.field-tag:hover {
+    transform: scale(1.05);
+}
+
+.preview-box {
+    background: #f0f8ff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 100px;
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+/* Mail Merge Document Styles */
+.merge-document {
+    max-width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: white;
+    padding: 20mm;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    page-break-after: always;
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+    line-height: 1.6;
+}
+
+.merge-document:last-child {
+    page-break-after: avoid;
+}
+
+.document-content {
+    white-space: pre-wrap;
+    text-align: justify;
+}
+
+.document-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.document-footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 10pt;
+    color: #666;
+}
+
+@media print {
+    .merge-document {
+        box-shadow: none;
+        margin: 0;
+        page-break-after: always;
+    }
+    
+    .merge-document:last-child {
+        page-break-after: avoid;
+    }
+}

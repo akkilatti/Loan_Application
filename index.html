@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan Application Entry</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Loan Application Entry</h1>
+  <form id="appForm">
+    <form id="dataForm">
+            <div class="form-group">
+                <label for="cifid">CIF ID:</label>
+                <input type="text" id="cifid" name="cifid" required>
+            </div>
+    <input type="text" name="" placeholder="CIF_ID" required>
+    <input type="date" name="APPLY_DT" required>
+    <input type="text" name="APPLICANT_NAME" placeholder="Applicant Name" required>
+    <input type="text" name="FILE_WITH" placeholder="File With">
+    <input type="text" name="LEAD_BY" placeholder="Lead By">
+    <input type="text" name="MOBILE" placeholder="Mobile">
+    <input type="text" name="SECTOR" placeholder="Sector">
+    <input type="text" name="LOAN_TYPE" placeholder="Loan Type">
+    <input type="number" name="REQ_AMT" placeholder="Requested Amount">
+
+    <select name="STATUS" required>
+      <option value="">Select Status</option>
+      <option value="11. Pending - Documents">11. Pending - Documents</option>
+      <option value="12. Pending - CIBIL">12. Pending - CIBIL</option>
+      <option value="13. Pending - Pre-Inspection">13. Pending - Pre-Inspection</option>
+      <option value="14. Processing - Branch">14. Processing - Branch</option>
+      <option value="15. Processing - SKVK">15. Processing - SKVK</option>
+      <option value="16. Processing - RBC">16. Processing - RBC</option>
+      <option value="17. Processing - SMEUC">17. Processing - SMEUC</option>
+      <option value="18. Processing - ZO">18. Processing - ZO</option>
+      <option value="19. Sanctioned">19. Sanctioned</option>
+      <option value="20. Completed - Documentation">20. Completed - Documentation</option>
+      <option value="21. Partial Disbursement">21. Partial Disbursement</option>
+      <option value="22. Completed - Disbursement">22. Completed - Disbursement</option>
+      <option value="23. Pending - Post-Inspection">23. Pending - Post-Inspection</option>
+      <option value="24. Rejected">24. Rejected</option>
+    </select>
+
+    <input type="text" name="REMARKS" placeholder="Remarks">
+    <input type="number" name="SANC_AMT" placeholder="Sanction Amount">
+    <input type="text" name="SANC_AUTH" placeholder="Sanction Authority">
+    <input type="date" name="SANC_DT">
+    <input type="text" name="SCHEME" placeholder="Scheme">
+    <input type="text" name="LOAN_AC" placeholder="Loan AC">
+    <input type="date" name="DISB_DT">
+    <input type="number" name="DISB_AMT" placeholder="Disbursed Amount">
+    <input type="text" name="PPC" placeholder="PPC">
+    <input type="text" name="CIBIL_FEE" placeholder="CIBIL Fee">
+    <input type="date" name="POST_INSP_DT">
+    <input type="text" name="INSURANCE" placeholder="Insurance">
+
+    <button type="submit">Submit</button>
+    <button type="button" onclick="location.href='register.html'">Register</button>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>

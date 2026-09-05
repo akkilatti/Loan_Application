@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 800px;
+}
+
+input, select, button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+button {
+  grid-column: span 2;
+}
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 8px;
+  border: 1px solid #aaa;
+}
